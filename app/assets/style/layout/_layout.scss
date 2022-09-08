@@ -1,0 +1,90 @@
+.nav{
+    position: relative;
+    @include media-breakpoint-up(md){
+        .col:not(:last-child){
+            border-right: 1px solid #000;
+        }
+    }
+    
+    &-logo{
+        width: 85px;
+        @include media-breakpoint-up(md){
+            width: auto;
+        }
+    }
+
+    &-search{
+        width: auto;
+        flex-grow: 1;
+        height: 36px;
+        z-index: 5;
+    }
+    
+    .fa-magnifying-glass{
+        font-size: 18px;
+        @include media-breakpoint-up(md){
+            font-size: 24px;
+        }
+    }
+    
+    &-btn-bars{
+        @include media-breakpoint-up(md){
+            display: none;
+        }
+    }
+    
+    &-collapse{
+        background: white;
+        position: absolute;
+        width: 100%;
+        margin-top: 1px;
+        top:100% ;
+        left: 0;
+        z-index: 5;
+        @include media-breakpoint-up(md){
+            background: transparent;
+            position: static;
+            width: auto;
+            margin-top: 0;
+        }
+    }
+    
+    &-list{
+        @include media-breakpoint-up(md){
+            display: flex;
+        }
+    }
+    
+    .nav-item{
+        &:nth-child(1){
+            border-bottom: 1px solid #000;
+            @include media-breakpoint-up(md){
+                border-bottom: none;
+            }
+        }
+        
+        @include media-breakpoint-up(md){
+            flex-grow: 1;
+            &:not(:last-child){
+                border-right: 1px solid #000;
+            }
+        }
+    }
+    
+    .link-wallet{        
+        @include media-breakpoint-up(md){
+            display: none;            
+        }
+        &-md{
+            display: none;
+            @include media-breakpoint-up(md){
+                display: block;            
+            }
+        }
+    }   
+    .collapse:not(.show){
+        @include media-breakpoint-up(md){
+            display: block;
+        }
+    } 
+}
