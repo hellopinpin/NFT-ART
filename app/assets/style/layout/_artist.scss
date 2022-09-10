@@ -1,0 +1,14 @@
+.artist_profile{
+    .h1{
+        font-size: 32px;
+        @include media-breakpoint-up(lg){
+            font-size: 48px;
+        }
+    }
+    .card-image{
+        @include media-breakpoint-up(lg){
+            width: 44.44%;
+            flex-shrink: 0;
+        }
+    }
+}
