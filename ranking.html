@@ -1,10 +1,165 @@
----
-title: RANKING
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
-<main>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RANKING :: NFT ART</title>
+  <link rel="icon" href="./assets/images/logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  
+  <nav class="header_nav nav py-3 border-bottom">
+    <div class="container-lg">
+      <div class="row g-0">
+        <div class="col col-md-5 d-flex align-items-center">
+          <a class="nav-logo" href="index.html"><img src="./assets/images/logo.svg" alt="logo"></a>
+        </div>
+        
+        <div class="col col-md-4 d-flex justify-content-around align-items-center flex-grow-0">
+          <form class="d-flex">
+            <div class="collapse-horizontal collapse" id="collapseWidthNavSearch">
+              <input class="form-control nav-search bg-transparent border-0 p-0" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+            </div>
+            <button class="btn border-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthNavSearch" aria-expanded="false" aria-controls="collapseWidthNavSearch">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          
+        </div>
+        
+        <div class="col col-md-3 flex-grow-0">
+          <button class="btn nav-btn-bars border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navToggler" aria-controls="navToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fs-4"></i>
+          </button>
+          <div class="collapse multi-collapse nav-collapse" id="navToggler">
+            <ul class="nav-list container-lg px-lg-0 fw-bold text-center justify-content-between">
+              <li class="nav-item">
+                <a class="nav-link fs-5 py-4 py-md-6" href="#">探索</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 py-4 py-md-6" href="ranking.html">市值</a>
+              </li>
+              <li class="nav-item mb-4 mb-md-0">
+                <a role="button" class="nav-link link-wallet-md fs-5 py-4 py-md-6" data-bs-toggle="modal" data-bs-target="#walletModal"><i class="fa-solid fa-wallet fs-3"></i></a>
+                <button type="button" class="btn btn-primary link-wallet py-2 w-100" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="navToggler collapseWallet">連結錢包</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- 手機板連結錢包 -->
+  <div class="collapse multi-collapse collapseWallet" id="collapseWallet">
+    <div class="card border-0 vw-100">
+      <div class="card-header wallet-header py-3 px-2 position-relative">
+        <h5 class="card-title text-center mb-0 fs-4">連結你的錢包</h5>
+        <button class="btn position-absolute top-50 end-0 translate-middle-y" type="button" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#collapseWallet" aria-expanded="false" aria-controls="collapseWallet">
+          <i class="fa-solid fa-xmark fs-4"></i>
+        </button>
+      </div>
+      <div class="card-body wallet-body py-4 px-2 pe-1">
+        <div class="btn-group wallet-group w-100 d-flex flex-column gap-2" role="group" aria-label="Basic radio toggle button group">
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-MetaMask" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-MetaMask"><img src="./assets/images/connect/connect01.png" alt="wallet-01" class="wallet-icon me-1"><span>MetaMask</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-CoinbaseWallet" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-CoinbaseWallet"><img src="./assets/images/connect/connect02.png" alt="wallet-02" class="wallet-icon me-1"><span>Coinbase Wallet</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-WalletConnect" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-WalletConnect"><img src="./assets/images/connect/connect03.png" alt="wallet-03" class="wallet-icon me-1"><span>WalletConnect</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-Phantom" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-Phantom"><img src="./assets/images/connect/connect04.png" alt="wallet-04" class="wallet-icon me-1"><span>Phantom</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-Glow" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-Glow"><img src="./assets/images/connect/connect05.png" alt="wallet-05" class="wallet-icon me-1"><span>Glow</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-Fortmatic" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-Fortmatic"><img src="./assets/images/connect/connect06.png" alt="wallet-06" class="wallet-icon me-1"><span>Fortmatic</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+        </div>
+      </div>
+      <div class="card-footer wallet-footer justify-content-center p-0 border-0">
+        <button type="button" class="btn btn-primary border-0 border-top py-1 px-6 m-0 fs-5 w-100">連結錢包</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- PC版連結錢包 -->
+  <div class="modal fade wallet-modal" id="walletModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header wallet-header justify-content-center">
+          <h5 class="modal-title fs-4" id="walletModalLabel">連結你的錢包</h5>
+        </div>
+        <div class="modal-body wallet-body py-4 pe-1">
+          <div class="btn-group wallet-group row row-cols-2 g-1 w-100" role="group" aria-label="Basic radio toggle button group">
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-MetaMask" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-MetaMask"><img src="./assets/images/connect/connect01.png" alt="wallet-01" class="wallet-icon me-1"><span>MetaMask</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-CoinbaseWallet" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-CoinbaseWallet"><img src="./assets/images/connect/connect02.png" alt="wallet-02" class="wallet-icon me-1"><span>Coinbase Wallet</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-WalletConnect" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-WalletConnect"><img src="./assets/images/connect/connect03.png" alt="wallet-03" class="wallet-icon me-1"><span>WalletConnect</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-Phantom" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-Phantom"><img src="./assets/images/connect/connect04.png" alt="wallet-04" class="wallet-icon me-1"><span>Phantom</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-Glow" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-Glow"><img src="./assets/images/connect/connect05.png" alt="wallet-05" class="wallet-icon me-1"><span>Glow</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-Fortmatic" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-Fortmatic"><img src="./assets/images/connect/connect06.png" alt="wallet-06" class="wallet-icon me-1"><span>Fortmatic</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+          </div>
+        </div>
+        <div class="modal-footer wallet-footer justify-content-center px-3 pt-0 pb-4 border-0">
+          <button type="button" class="btn btn-primary py-1 px-6 m-0 fs-5">連結錢包</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <main>
     <section class="ranking mt-4 mb-6 mt-lg-6 mb-lg-8">
         <div class="container">
             <h1 class="h1 text-center mb-3 mb-lg-4">市價排行榜</h1>
@@ -552,3 +707,17 @@ current: index
     
     
 </main>
+  
+  <footer class="footer border-1 border-top pt-1">
+    <p class="text-center py-3 border-4 border-top">© ART NFT. All Rights Reserved</p>
+  </footer>
+  
+  <!-- <script src="./assets/js/vendors.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
