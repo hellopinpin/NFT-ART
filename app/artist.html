@@ -7,14 +7,14 @@ current: index
 <main>
     <section class="artist_profile mt-4 mb-6 mt-lg-6 mb-lg-8">
         <div class="container">
-            <div class="row row-cols-1 row-cols-lg-2">
+            <div class="row row-cols-1 row-cols-lg-2 gy-3">
                 <div class="col col-lg-9">
                     <div class="card border-0 flex-lg-row">
                         <div class="card-image"><img src="./assets/images/artist01.jpg" class="fit-cover" alt="art01"></div>
                         <div class="d-flex flex-column justify-content-between border">
                             <div class="card-header border-0 pt-4 pt-lg-4 px-3 px-lg-4 pb-0">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h1 class="h1 font-squada">Michael</h1>
+                                    <h1 class="h1 font-squada ps-lg-0 pe-lg-3">Michael</h1>
                                     <div class="d-flex gap-1">
                                         <a href="#"><i class="fa-brands fa-discord"></i></a>
                                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -22,7 +22,7 @@ current: index
                                         <a href="#"><i class="fa-brands fa-twitter"></i></a>
                                     </div>
                                 </div>
-                                <p class="font-squada">0x3ya666…88ef</p>
+                                <p class="font-squada ps-lg-0 pe-lg-3">0x3ya666…88ef</p>
                             </div>
                             <div class="card-body py-4 px-3 p-lg-4 pb-lg-5">
                                 <p>Michael自小在山林長大，能夠與花草樹木大自然進行靈體溝通，創作題材常見大山、大水、花草與樹木，從日常生活出發，擁有個⼈獨樹⼀格的創作風格，作品觸及靈魂深處、探索未知宇宙，透過與大自然的溝通，探討著存在的本質。​</p>
@@ -33,24 +33,24 @@ current: index
                 <div class="col col-lg-3">
                     <table class="table border mb-0">
                         <tbody>
-                          <tr>
-                            <th scope="row">販售中</th>
-                            <td class="fs-2 text-end font-squada">168</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">地板價格</th>
-                            <td class="fs-2 text-end font-squada">0.6 <span class="fs-3">ETH</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">7 日成交</th>
-                            <td class="fs-2 text-end font-squada">8.8 <span class="fs-3">ETH</span></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">30 日成交</th>
-                            <td class="fs-2 text-end font-squada">23.1 <span class="fs-3">ETH</span></td>
-                          </tr>
+                            <tr>
+                                <th scope="row" class="px-lg-3 px-xl-4">販售中</th>
+                                <td class="fs-2 text-end font-squada ps-lg-0 pe-lg-3 px-xl-4">168</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="px-lg-3 px-xl-4">地板價格</th>
+                                <td class="fs-2 text-end font-squada ps-lg-0 pe-lg-3 px-xl-4">0.6 <span class="fs-3">ETH</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="px-lg-3 px-xl-4">7 日成交</th>
+                                <td class="fs-2 text-end font-squada ps-lg-0 pe-lg-3 px-xl-4">8.8 <span class="fs-3">ETH</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="px-lg-3 px-xl-4">30 日成交</th>
+                                <td class="fs-2 text-end font-squada ps-lg-0 pe-lg-3 px-xl-4">23.1 <span class="fs-3">ETH</span></td>
+                            </tr>
                         </tbody>
-                      </table>
+                    </table>
                 </div>
                 
             </div>
@@ -58,4 +58,194 @@ current: index
         </div>
         
     </section>
+    <section class="artist_main mb-6 mb-lg-8">
+        <div class="container">
+            <ul class="nav nav-tabs mb-4 mb-lg-6" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="artworks-tab" data-bs-toggle="tab" data-bs-target="#artist-artWorks" type="button" role="tab" aria-controls="artworks" aria-selected="true">
+                        <span class="span-1">Art Works</span>
+                        <span class="span-2 fw-bold ps-3 fs-4 d-none d-lg-inline">系列作品</span>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="collection-tab" data-bs-toggle="tab" data-bs-target="#artist-collection" type="button" role="tab" aria-controls="collection" aria-selected="false">
+                        <span class="span-1">Collection</span>
+                        <span class="span-2 fw-bold ps-3 fs-4 d-none d-lg-inline">收藏品</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active artist-artWorks" id="artist-artWorks" role="tabpanel" aria-labelledby="artworks-tab">
+                    <ul class="d-flex flex-column gap-3 gap-lg-6">
+                        <li class="card d-block mb-lg-7">
+                            <div class="triangle start-0 top-0 border-12 border-top border-start"></div>
+                            <div class="triangle end-0 top-0 border-12 border-top border-end"></div>
+                            <div class="col col-lg-10 mx-auto">
+                                <h2 class="fs-3 fw-bold mt-5 px-3 px-lg-0">追求者送我的花</h2>
+                                <div class="card-body pt-3 pb-5 px-lg-0 pb-lg-0">
+                                    <p class="mb-4 mb-lg-0 pe-lg-8">我又沒有特別喜歡花，為什麼不給我現金就好，擺在那也不知道要幹嘛，只好畫起來看有沒有人要買，阿不然如果真的喜歡我，把這些都買回去八。</p>
+                                    <img src="./assets/images/art/art31.jpg" alt="art31" class="card-image fit-cover d-lg-none mb-3">
+                                    <a href="#" class="btn btn-triangle">more</a>
+                                </div>
+                                <ul class="card-image-group d-none d-lg-flex gap-1">
+                                    <li class="card-group-item"><img src="./assets/images/art/art31.jpg" alt="art31" class="card-image fit-cover"></li>
+                                    <li class="card-group-item"><img src="./assets/images/art/art30.jpg" alt="art30" class="card-image fit-cover"></li>
+                                    <li class="card-group-item"><img src="./assets/images/art/art14.jpg" alt="art14" class="card-image fit-cover"></li>
+                                    <li class="card-group-item"><img src="./assets/images/art/art29.jpg" alt="art29" class="card-image fit-cover"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="card d-block mb-lg-7">
+                            <div class="triangle start-0 top-0 border-12 border-top border-start"></div>
+                            <div class="triangle end-0 top-0 border-12 border-top border-end"></div>
+                            <div class="col col-lg-10 mx-auto">
+                                <h2 class="fs-3 fw-bold mt-5 px-3 px-lg-0">我家窗前的鳥</h2>
+                                <div class="card-body pt-3 pb-5 px-lg-0 pb-lg-0">
+                                    <p class="mb-4 mb-lg-0 pe-lg-8">家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。</p>
+                                    <img src="./assets/images/art/art27.jpg" alt="art27" class="card-image fit-cover d-lg-none mb-3">
+                                    <a href="#" class="btn btn-triangle">more</a>
+                                </div>
+                                <ul class="card-image-group d-none d-lg-flex gap-1">
+                                    <li class="card-group-item"><img src="./assets/images/art/art27.jpg" alt="art27" class="card-image fit-cover"></li>
+                                    <li class="card-group-item"><img src="./assets/images/art/art20.jpg" alt="art20" class="card-image fit-cover"></li>
+                                    <li class="card-group-item"><img src="./assets/images/art/art26.jpg" alt="art26" class="card-image fit-cover"></li>
+                                    <li class="card-group-item"><img src="./assets/images/art/art22.jpg" alt="art22" class="card-image fit-cover"></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="artist-collection" role="tabpanel" aria-labelledby="collection-tab">
+                    <div class="masonry row row-cols-2 row-cols-lg-3 row-cols-xl-4"  data-masonry='{"percentPosition": true }'>
+                        <div class="col">
+                            <div class="card bg-transparent mt-4 mt-lg-7">
+                                <div class="card-image">
+                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art09.jpg" class="fit-cover" alt="art09" style="aspect-ratio:1 ;"></a>
+                                    <div class="card-text text-white p-3 m-3">
+                                        <p class="">唯一想擁有的人，唯一不可以擁有的</p>
+                                        <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                        <div class="mt-auto text-end">
+                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="fs-6 p-1 py-lg-3 px-lg-0">區塊戀-他的私生活</h3>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-transparent mt-4 mt-lg-7">
+                                <div class="card-image">
+                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art10.jpg" class="fit-cover" alt="art10" style="aspect-ratio:0.8 ;"></a>
+                                    <div class="card-text text-white p-3 m-3">
+                                        <p class="">唯一想擁有的人，唯一不可以擁有的</p>
+                                        <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                        <div class="mt-auto text-end">
+                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="fs-6 p-1 py-lg-3 px-lg-0">夏娃的醜聞</h3>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-transparent mt-4 mt-lg-7">
+                                <div class="card-image">
+                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art02.jpg" class="fit-cover" alt="art02"></a>
+                                    <div class="card-text text-white p-3 m-3">
+                                        <p class="">唯一想擁有的人，唯一不可以擁有的</p>
+                                        <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                        <div class="mt-auto text-end">
+                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="fs-6 p-1 py-lg-3 px-lg-0">藍色啤酒海</h3>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-transparent mt-4 mt-lg-7">
+                                <div class="card-image">
+                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art11.jpg" class="fit-cover" alt="art11"></a>
+                                    <div class="card-text text-white p-3 m-3 gap-0">
+                                        <p class="">唯一想擁有的人，唯一不可以擁有的</p>
+                                        <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                        <div class="mt-auto text-end">
+                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="fs-6 p-1 py-lg-3 px-lg-0">沒有人愛我</h3>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-transparent mt-4 mt-lg-7">
+                                <div class="card-image">
+                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art12.jpg" class="fit-cover" alt="art12"></a>
+                                    <div class="card-text text-white p-3 m-3 gap-0">
+                                        <p class="">唯一想擁有的人，唯一不可以擁有的</p>
+                                        <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                        <div class="mt-auto text-end">
+                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="fs-6 p-1 py-lg-3 px-lg-0">不哭不哭眼淚是珍珠</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <div class="card bg-transparent mt-4 mt-lg-7">
+                                <div class="card-image">
+                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art03.jpg" class="fit-cover" alt="art04" style="aspect-ratio:1 ;"></a>
+                                    <div class="card-text text-white p-3 m-3">
+                                        <p class="">唯一想擁有的人，唯一不可以擁有的</p>
+                                        <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                        <div class="mt-auto text-end">
+                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="fs-6 p-1 py-lg-3 px-lg-0">十分鐘就到</h3>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-transparent mt-4 mt-lg-7">
+                                <div class="card-image">
+                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art04.jpg" class="fit-cover" alt="art03"></a>
+                                    <div class="card-text text-white p-3 m-3">
+                                        <p class="">唯一想擁有的人，唯一不可以擁有的</p>
+                                        <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                        <div class="mt-auto text-end">
+                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="fs-6 p-1 py-lg-3 px-lg-0">我這樣有美嗎</h3>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-transparent mt-4 mt-lg-7">
+                                <div class="card-image">
+                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art27.jpg" class="fit-cover" alt="art27"></a>
+                                    <div class="card-text text-white p-3 m-3">
+                                        <p class="">唯一想擁有的人，唯一不可以擁有的</p>
+                                        <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                        <div class="mt-auto text-end">
+                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="fs-6 p-1 py-lg-3 px-lg-0">我真的受傷了</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+</section>
 </main>
