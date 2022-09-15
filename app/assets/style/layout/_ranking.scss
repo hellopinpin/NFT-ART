@@ -78,12 +78,15 @@
             display: flex;
             justify-content: end;
             align-items: end;
+            
+            
             > *{
                 font-size: 10px;
                 padding-bottom: 4px;
                 padding-right: 4px;
             }
         }
+        
         
         &collapse{
             position: relative;
@@ -93,12 +96,8 @@
         &table{
             .ranking-head{
                 font-size: 14px;
-                padding-bottom: 8px;
                 width: calc(100% / 3);
             }
-
-            
         }
     }
-    
 }
