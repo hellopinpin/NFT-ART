@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>藝術品系列 :: NFT ART</title>
+  <link rel="icon" href="./assets/images/logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  
+  <nav class="header_nav nav py-3 py-lg-0 border-bottom">
+    <div class="container-lg">
+      <div class="row g-0">
+        <div class="col col-md-5 d-flex align-items-center">
+          <a class="nav-logo" href="index.html"><img src="./assets/images/logo.svg" alt="logo"></a>
+        </div>
+        
+        <div class="col col-md-4 d-flex justify-content-around align-items-center flex-grow-0">
+          <form class="d-flex">
+            <div class="collapse-horizontal collapse" id="collapseWidthNavSearch">
+              <input class="form-control nav-search bg-transparent border-0 p-0" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+            </div>
+            <button class="btn border-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthNavSearch" aria-expanded="false" aria-controls="collapseWidthNavSearch">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          
+        </div>
+        
+        <div class="col col-md-3 flex-grow-0">
+          <button class="btn nav-btn-bars border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navToggler" aria-controls="navToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fs-4"></i>
+          </button>
+          <div class="collapse multi-collapse nav-collapse" id="navToggler">
+            <ul class="nav-list container-lg px-lg-0 fw-bold text-center justify-content-between">
+              <li class="nav-item">
+                <a class="nav-link fs-5 py-4 py-md-6" href="explore.html">探索</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 py-4 py-md-6" href="ranking.html">市值</a>
+              </li>
+              <li class="nav-item mb-4 mb-md-0">
+                <a role="button" class="nav-link link-wallet-md fs-5 py-4 py-md-6" data-bs-toggle="modal" data-bs-target="#walletModal"><i class="fa-solid fa-wallet fs-3"></i></a>
+                <button type="button" class="btn btn-primary link-wallet py-2 w-100" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="navToggler collapseWallet">連結錢包</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- 手機板連結錢包 -->
+  <div class="collapse multi-collapse collapseWallet" id="collapseWallet">
+    <div class="card border-0 vw-100">
+      <div class="card-header wallet-header py-3 px-2 position-relative">
+        <h5 class="card-title text-center mb-0 fs-4">連結你的錢包</h5>
+        <button class="btn position-absolute top-50 end-0 translate-middle-y" type="button" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#collapseWallet" aria-expanded="false" aria-controls="collapseWallet">
+          <i class="fa-solid fa-xmark fs-4"></i>
+        </button>
+      </div>
+      <div class="card-body wallet-body py-4 px-2 pe-1">
+        <div class="btn-group wallet-group w-100 d-flex flex-column gap-2" role="group" aria-label="Basic radio toggle button group">
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-MetaMask" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-MetaMask"><img src="./assets/images/connect/connect01.png" alt="wallet-01" class="wallet-icon me-1"><span>MetaMask</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-CoinbaseWallet" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-CoinbaseWallet"><img src="./assets/images/connect/connect02.png" alt="wallet-02" class="wallet-icon me-1"><span>Coinbase Wallet</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-WalletConnect" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-WalletConnect"><img src="./assets/images/connect/connect03.png" alt="wallet-03" class="wallet-icon me-1"><span>WalletConnect</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-Phantom" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-Phantom"><img src="./assets/images/connect/connect04.png" alt="wallet-04" class="wallet-icon me-1"><span>Phantom</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-Glow" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-Glow"><img src="./assets/images/connect/connect05.png" alt="wallet-05" class="wallet-icon me-1"><span>Glow</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-Fortmatic" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-Fortmatic"><img src="./assets/images/connect/connect06.png" alt="wallet-06" class="wallet-icon me-1"><span>Fortmatic</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+        </div>
+      </div>
+      <div class="card-footer wallet-footer justify-content-center p-0 border-0">
+        <button type="button" class="btn btn-primary border-0 border-top py-1 px-6 m-0 fs-5 w-100">連結錢包</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- PC版連結錢包 -->
+  <div class="modal fade wallet-modal" id="walletModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header wallet-header justify-content-center">
+          <h5 class="modal-title fs-4" id="walletModalLabel">連結你的錢包</h5>
+        </div>
+        <div class="modal-body wallet-body py-4 pe-1">
+          <div class="btn-group wallet-group row row-cols-2 g-1 w-100" role="group" aria-label="Basic radio toggle button group">
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-MetaMask" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-MetaMask"><img src="./assets/images/connect/connect01.png" alt="wallet-01" class="wallet-icon me-1"><span>MetaMask</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-CoinbaseWallet" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-CoinbaseWallet"><img src="./assets/images/connect/connect02.png" alt="wallet-02" class="wallet-icon me-1"><span>Coinbase Wallet</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-WalletConnect" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-WalletConnect"><img src="./assets/images/connect/connect03.png" alt="wallet-03" class="wallet-icon me-1"><span>WalletConnect</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-Phantom" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-Phantom"><img src="./assets/images/connect/connect04.png" alt="wallet-04" class="wallet-icon me-1"><span>Phantom</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-Glow" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-Glow"><img src="./assets/images/connect/connect05.png" alt="wallet-05" class="wallet-icon me-1"><span>Glow</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-Fortmatic" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-Fortmatic"><img src="./assets/images/connect/connect06.png" alt="wallet-06" class="wallet-icon me-1"><span>Fortmatic</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+          </div>
+        </div>
+        <div class="modal-footer wallet-footer justify-content-center px-3 pt-0 pb-4 border-0">
+          <button type="button" class="btn btn-primary py-1 px-6 m-0 fs-5">連結錢包</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <main>
+    <section class="artworkSeries mt-4 mb-6 mt-lg-6 mb-lg-8">
+        <div class="container">
+            <div class="row">
+                <aside class="col col-lg-3 d-none d-lg-block">
+                    <div class="filter accordion bg-white border" id="accordionFilter">
+                        <div class="accordion-item border-filter">
+                            <h3 class="accordion-header" id="headingEth">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterEth" aria-expanded="true" aria-controls="collapseFilterEth">
+                                    網路
+                                </button>
+                            </h3>
+                            <div id="collapseFilterEth" class="accordion-collapse collapse show" aria-labelledby="headingEth">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterCrypto-eth">
+                                        <label class="form-check-label" for="filterCrypto-eth">
+                                            以太坊
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterCrypto-bnb">
+                                        <label class="form-check-label" for="filterCrypto-bnb">
+                                            BNB 智能鏈
+                                        </label>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-filter">
+                            <h3 class="accordion-header" id="headingState">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterState" aria-expanded="true" aria-controls="collapseFilterState">
+                                    狀態
+                                </button>
+                            </h3>
+                            <div id="collapseFilterState" class="accordion-collapse collapse show" aria-labelledby="headingState">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterState-display">
+                                        <label class="form-check-label" for="filterState-display">
+                                            僅展示
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterState-onSale">
+                                        <label class="form-check-label" for="filterState-onSale">
+                                            拍賣中
+                                        </label>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-group">
+                            <h3 class="fw-bold text-muted fs-6 p-4">屬性</h3>
+                            <div class="accordion-item">
+                                <h4 class="accordion-header" id="headingSpecies">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterSpecies" aria-expanded="true" aria-controls="collapseFilterSpecies">
+                                        品種
+                                    </button>
+                                </h4>
+                                <div id="collapseFilterSpecies" class="accordion-collapse collapse" aria-labelledby="headingSpecies">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterSpecies-01">
+                                            <label class="form-check-label" for="filterSpecies-01">
+                                                八哥
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterSpecies-02">
+                                            <label class="form-check-label" for="filterSpecies-02">
+                                                虎皮鸚鵡
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterSpecies-03">
+                                            <label class="form-check-label" for="filterSpecies-03">
+                                                太平鳥
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterSpecies-04">
+                                            <label class="form-check-label" for="filterSpecies-04">
+                                                畫眉鳥
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="accordion-item ">
+                                <h4 class="accordion-header" id="headingAmount">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterAmount" aria-expanded="true" aria-controls="collapseFilterAmount">
+                                        鳥的數量
+                                    </button>
+                                </h4>
+                                <div id="collapseFilterAmount" class="accordion-collapse collapse" aria-labelledby="headingAmount">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterAmount-01">
+                                            <label class="form-check-label" for="filterAmount-01">
+                                                1 隻
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterAmount-02">
+                                            <label class="form-check-label" for="filterAmount-02">
+                                                2 隻
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterAmount-03">
+                                            <label class="form-check-label" for="filterAmount-03">
+                                                5 隻
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="accordion-item ">
+                                <h4 class="accordion-header" id="headingFlower">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterFlower" aria-expanded="true" aria-controls="collapseFilterFlower">
+                                        是否有花草
+                                    </button>
+                                </h4>
+                                <div id="collapseFilterFlower" class="accordion-collapse collapse" aria-labelledby="headingFlower">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterFlower-01">
+                                            <label class="form-check-label" for="filterFlower-01">
+                                                有
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterFlower-02">
+                                            <label class="form-check-label" for="filterFlower-02">
+                                                沒有
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="accordion-item ">
+                                <h4 class="accordion-header" id="headingColor">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterColor" aria-expanded="true" aria-controls="collapseFilterColor">
+                                        鳥的顏色
+                                    </button>
+                                </h4>
+                                <div id="collapseFilterColor" class="accordion-collapse collapse" aria-labelledby="headingColor">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterColor-01">
+                                            <label class="form-check-label" for="filterColor-01">
+                                                白色
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterColor-02">
+                                            <label class="form-check-label" for="filterColor-02">
+                                                黑色
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterColor-03">
+                                            <label class="form-check-label" for="filterColor-03">
+                                                綠色
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterColor-04">
+                                            <label class="form-check-label" for="filterColor-04">
+                                                黃色
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterColor-05">
+                                            <label class="form-check-label" for="filterColor-05">
+                                                藍色
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </aside>
+                <section class="col col-lg-9">
+                    <section class="artworkSeries-header d-flex flex-column flex-lg-row align-items-end mb-6">
+                        <div class="mb-3 mb-lg-0 pe-lg-4">
+                            <div class="d-flex align-items-center">
+                                <img src="./assets/images/artist01.jpg" alt="artist01" class="rounded-circle me-3 artworkSeries-header-image">
+                                <h2 class="fs-3 font-squada">Michael</h2>
+                            </div>
+                            <h1 class="fs-2 mb-1">我家外面的鳥</h1>
+                            <p>家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。</p>
+                        </div>
+                        <ul class="artworkSeries-group d-flex bg-white border flex-shrink-0">
+                            <li class="artworkSeries-group-item text-center">
+                                <p class="pb-1">項目</p>
+                                <p class="font-squada fs-3">6.4k</p>
+                            </li>
+                            <li class="artworkSeries-group-item text-center">
+                                <p class="pb-1">擁有者</p>
+                                <p class="font-squada fs-3">2.5 k</p>
+                            </li>
+                            <li class="artworkSeries-group-item text-center">
+                                <p class="pb-1">底價</p>
+                                <p class="font-squada fs-3 d-flex align-items-center justify-content-center"><i class="fa-brands fa-ethereum fs-6"></i>1.38 k</p>
+                            </li>
+                            <li class="artworkSeries-group-item text-center">
+                                <p class="pb-1">總額</p>
+                                <p class="font-squada fs-3">2.8 k</p>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <div class="text-end">
+                            <button type="button" class="btn bg-white border py-1 px-4">最新上架<i class="fa-solid fa-sort ps-1"></i></button>
+                        </div>
+                        <div class="masonry row row-cols-2 row-cols-lg-3" data-masonry='{"percentPosition": true }'>
+                            <div class="col">
+                                <div class="card bg-transparent mt-4 mt-lg-7">
+                                    <div class="card-image">
+                                        <a href="#" class="stretched-link"><img src="./assets/images/art/art20.jpg" class="fit-cover" alt="art20" ></a>
+                                        <div class="card-text text-white p-3 m-3">
+                                            <p>這兩隻也太像企鵝了吧</p>
+                                            <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                            <div class="mt-auto text-end">
+                                                <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="fs-6 p-1 py-lg-3 px-lg-0">這兩隻也太像企鵝了吧</h3>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="col">
+                                <div class="card bg-transparent mt-4 mt-lg-7">
+                                    <div class="card-image">
+                                        <a href="#" class="stretched-link"><img src="./assets/images/art/art21.jpg" class="fit-cover" alt="art21" ></a>
+                                        <div class="card-text text-white p-3 m-3">
+                                            <p>3/14 情人節外面剛好有兩隻鳥，也在過情人節。</p>
+                                            <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                            <div class="mt-auto text-end">
+                                                <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="fs-6 p-1 py-lg-3 px-lg-0">兩情相悅</h3>
+                                    
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card bg-transparent mt-4 mt-lg-7">
+                                    <div class="card-image">
+                                        <a href="#" class="stretched-link"><img src="./assets/images/art/art22.jpg" class="fit-cover" alt="art22" ></a>
+                                        <div class="card-text text-white p-3 m-3">
+                                            <p>群聚的小鳥們</p>
+                                            <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                            <div class="mt-auto text-end">
+                                                <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="fs-6 p-1 py-lg-3 px-lg-0">群聚的小鳥們</h3>
+                                    
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card bg-transparent mt-4 mt-lg-7">
+                                    <div class="card-image">
+                                        <a href="#" class="stretched-link"><img src="./assets/images/art/art23.jpg" class="fit-cover" alt="art23" ></a>
+                                        <div class="card-text text-white p-3 m-3">
+                                            <p>與你分享的快樂勝過獨自擁有</p>
+                                            <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                            <div class="mt-auto text-end">
+                                                <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="fs-6 p-1 py-lg-3 px-lg-0">與你分享的快樂勝過獨自擁有</h3>
+                                    
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card bg-transparent mt-4 mt-lg-7">
+                                    <div class="card-image">
+                                        <a href="#" class="stretched-link"><img src="./assets/images/art/art24.jpg" class="fit-cover" alt="art24" ></a>
+                                        <div class="card-text text-white p-3 m-3">
+                                            <p>會唱 metal 的鳥</p>
+                                            <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                            <div class="mt-auto text-end">
+                                                <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="fs-6 p-1 py-lg-3 px-lg-0">會唱 metal 的鳥</h3>
+                                    
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card bg-transparent mt-4 mt-lg-7">
+                                    <div class="card-image">
+                                        <a href="#" class="stretched-link"><img src="./assets/images/art/art25.jpg" class="fit-cover" alt="art25" ></a>
+                                        <div class="card-text text-white p-3 m-3">
+                                            <p>一大一小兩個恰恰好</p>
+                                            <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                            <div class="mt-auto text-end">
+                                                <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="fs-6 p-1 py-lg-3 px-lg-0">一大一小兩個恰恰好</h3>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    
+                </section>
+            </div>
+        </div>
+    </section>
+</main>
+  
+  <footer class="footer border-1 border-top pt-1">
+    <p class="text-center py-3 border-4 border-top">© ART NFT. All Rights Reserved</p>
+  </footer>
+  
+  <!-- <script src="./assets/js/vendors.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

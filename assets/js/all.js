@@ -26,4 +26,11 @@ var swiper = new Swiper(".artistSwiper", {
     }
   }
 });
+$(document).ready(function () {
+  $('.ranking-item-button').click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass('bg-warning');
+    $(this).children('i').toggleClass('fa-plus').toggleClass('fa-minus');
+  });
+});
 //# sourceMappingURL=all.js.map
