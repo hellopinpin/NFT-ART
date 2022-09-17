@@ -17,31 +17,35 @@
 
 <body>
   
-  <nav class="header_nav nav py-3 py-lg-0 border-bottom">
+  <nav class="header_nav nav py-md-0 border-bottom position-relative">
     <div class="container-lg">
-      <div class="row g-0">
-        <div class="col col-md-5 d-flex align-items-center">
+      <div class="row g-0 justify-content-between">
+        <div class="col col-md-auto col-lg-5 d-flex align-items-center flex-grow-1">
           <a class="nav-logo" href="index.html"><img src="./assets/images/logo.svg" alt="logo"></a>
         </div>
         
-        <div class="col col-md-4 d-flex justify-content-around align-items-center flex-grow-0">
-          <form class="d-flex">
-            <div class="collapse-horizontal collapse" id="collapseWidthNavSearch">
-              <input class="form-control nav-search bg-transparent border-0 p-0" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+        <div class="col col-md-auto col-lg-4 d-flex justify-content-end align-items-center flex-grow-1">
+          <form class="w-100 text-end px-md-3">
+            <div class="d-none d-md-flex">
+              <input class="form-control nav-search-input bg-transparent border-0 p-0" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+              <button class="btn border-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <button class="btn border-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthNavSearch" aria-expanded="false" aria-controls="collapseWidthNavSearch">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+            <button class="btn border-0 d-md-none nav-searchBar-mobile-show" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="position-absolute nav-searchBar-mobile" id="nav-searchBar-mobile">
+              <button class="btn border-0 nav-searchBar-mobile-hide" type="button"><i class="fa-solid fa-angle-left"></i></button>
+              <input class="form-control nav-search bg-transparent border-0 p-0" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">              
+              <button class="btn border-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
           </form>
-          
         </div>
         
-        <div class="col col-md-3 flex-grow-0">
+        <div class="col col-md-4 col-lg-3 flex-grow-0">
+
           <button class="btn nav-btn-bars border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navToggler" aria-controls="navToggler" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars fs-4"></i>
           </button>
           <div class="collapse multi-collapse nav-collapse" id="navToggler">
-            <ul class="nav-list container-lg px-lg-0 fw-bold text-center justify-content-between">
+            <ul class="nav-list container-lg px-lg-0 g-0 fw-bold text-center justify-content-between">
               <li class="nav-item">
                 <a class="nav-link fs-5 py-4 py-md-6" href="explore.html">探索</a>
               </li>

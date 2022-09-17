@@ -14742,6 +14742,8 @@ a {
 
 .header_nav {
   position: relative;
+  padding-top: 7px;
+  padding-bottom: 6px;
 }
 
 @media (min-width: 768px) {
@@ -14760,7 +14762,7 @@ a {
   }
 }
 
-.header_nav .nav-search {
+.header_nav .nav-search-input {
   width: auto;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -14777,6 +14779,31 @@ a {
   .header_nav .fa-magnifying-glass {
     font-size: 24px;
   }
+}
+
+.header_nav .nav-searchBar-mobile {
+  padding-top: 7px;
+  padding-bottom: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #F0F0F0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media (min-width: 768px) {
+  .header_nav .nav-searchBar-mobile {
+    display: none;
+  }
+}
+
+.header_nav .nav-searchBar-mobile:not(.show) {
+  left: -100%;
 }
 
 @media (min-width: 768px) {
@@ -15484,16 +15511,44 @@ a {
   padding-right: 4px;
 }
 
+.offcanvas-lg {
+  width: 100vw !important;
+}
+
+@media (min-width: 992px) {
+  .filter {
+    border: 1px solid #000;
+  }
+}
+
 .filter .border-filter {
   border-bottom: 2px solid #bfbfbf;
 }
 
 .filter .accordion-body {
   padding-top: 0;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media (min-width: 992px) {
+  .filter .accordion-body {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 .filter .accordion-button {
   padding-bottom: 16px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media (min-width: 992px) {
+  .filter .accordion-button {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 .filter .accordion-button:not(.collapsed)::after {
@@ -15525,6 +15580,7 @@ a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  margin-right: 1.5rem;
 }
 
 .filter .form-check-input {
@@ -15537,6 +15593,16 @@ a {
 
 .filter .accordion-group .accordion-item .accordion-button {
   padding-top: 0;
+}
+
+.btn-filter {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 100;
 }
 
 /*# sourceMappingURL=all.css.map */
