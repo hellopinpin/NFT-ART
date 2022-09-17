@@ -5,200 +5,413 @@ engine: ejs
 current: index
 ---
 <main>
+    <div class="d-lg-none">
+        <button class="btn btn-dark py-1 px-7 btn-filter" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter" aria-controls="offcanvasFilter">
+            篩選條件<span class="font-squada"> 2</span>
+        </button>
+        
+        <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasFilterleLabel">
+            <div class="container px-lg-0 border-bottom">
+                <div class="filter-header position-relative">
+                    <p class="filter-title py-3 text-center fs-4" id="offcanvasFilterLabel">篩選條件</p>
+                    <button type="button" class="btn btn-filter-close fs-3 me-n2 position-absolute text-reset end-0 top-50 translate-middle-y" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasFilter" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            
+            <div class="filter accordion bg-white" id="accordionFilter">
+                <div class="container px-lg-0">
+                    <div class="accordion-item border-filter">
+                        <h3 class="accordion-header" id="headingEth">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterEth" aria-expanded="true" aria-controls="collapseFilterEth">
+                                網路
+                            </button>
+                        </h3>
+                        <div id="collapseFilterEth" class="accordion-collapse collapse show" aria-labelledby="headingEth">
+                            <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="filterCrypto-eth">
+                                    <label class="form-check-label" for="filterCrypto-eth">
+                                        以太坊
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="filterCrypto-bnb">
+                                    <label class="form-check-label" for="filterCrypto-bnb">
+                                        BNB 智能鏈
+                                    </label>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-filter">
+                        <h3 class="accordion-header" id="headingState">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterState" aria-expanded="true" aria-controls="collapseFilterState">
+                                狀態
+                            </button>
+                        </h3>
+                        <div id="collapseFilterState" class="accordion-collapse collapse show" aria-labelledby="headingState">
+                            <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="filterState-display">
+                                    <label class="form-check-label" for="filterState-display">
+                                        僅展示
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="filterState-onSale">
+                                    <label class="form-check-label" for="filterState-onSale">
+                                        拍賣中
+                                    </label>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-group">
+                        <h3 class="fw-bold text-muted fs-6 py-4 p-lg-4">屬性</h3>
+                        <div class="accordion-item">
+                            <h4 class="accordion-header" id="headingSpecies">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterSpecies" aria-expanded="true" aria-controls="collapseFilterSpecies">
+                                    品種
+                                </button>
+                            </h4>
+                            <div id="collapseFilterSpecies" class="accordion-collapse collapse" aria-labelledby="headingSpecies">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterSpecies-01">
+                                        <label class="form-check-label" for="filterSpecies-01">
+                                            八哥
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterSpecies-02">
+                                        <label class="form-check-label" for="filterSpecies-02">
+                                            虎皮鸚鵡
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterSpecies-03">
+                                        <label class="form-check-label" for="filterSpecies-03">
+                                            太平鳥
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterSpecies-04">
+                                        <label class="form-check-label" for="filterSpecies-04">
+                                            畫眉鳥
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item ">
+                            <h4 class="accordion-header" id="headingAmount">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterAmount" aria-expanded="true" aria-controls="collapseFilterAmount">
+                                    鳥的數量
+                                </button>
+                            </h4>
+                            <div id="collapseFilterAmount" class="accordion-collapse collapse" aria-labelledby="headingAmount">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterAmount-01">
+                                        <label class="form-check-label" for="filterAmount-01">
+                                            1 隻
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterAmount-02">
+                                        <label class="form-check-label" for="filterAmount-02">
+                                            2 隻
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterAmount-03">
+                                        <label class="form-check-label" for="filterAmount-03">
+                                            5 隻
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item ">
+                            <h4 class="accordion-header" id="headingFlower">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterFlower" aria-expanded="true" aria-controls="collapseFilterFlower">
+                                    是否有花草
+                                </button>
+                            </h4>
+                            <div id="collapseFilterFlower" class="accordion-collapse collapse" aria-labelledby="headingFlower">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterFlower-01">
+                                        <label class="form-check-label" for="filterFlower-01">
+                                            有
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterFlower-02">
+                                        <label class="form-check-label" for="filterFlower-02">
+                                            沒有
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item ">
+                            <h4 class="accordion-header" id="headingColor">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterColor" aria-expanded="true" aria-controls="collapseFilterColor">
+                                    鳥的顏色
+                                </button>
+                            </h4>
+                            <div id="collapseFilterColor" class="accordion-collapse collapse" aria-labelledby="headingColor">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterColor-01">
+                                        <label class="form-check-label" for="filterColor-01">
+                                            白色
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterColor-02">
+                                        <label class="form-check-label" for="filterColor-02">
+                                            黑色
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterColor-03">
+                                        <label class="form-check-label" for="filterColor-03">
+                                            綠色
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterColor-04">
+                                        <label class="form-check-label" for="filterColor-04">
+                                            黃色
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="filterColor-05">
+                                        <label class="form-check-label" for="filterColor-05">
+                                            藍色
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-auto py-2" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasFilter" aria-label="Close">確認</button>
+        </div>
+    </div>
+    
+    
     <section class="artworkSeries mt-4 mb-6 mt-lg-6 mb-lg-8">
         <div class="container">
             <div class="row">
                 <aside class="col col-lg-3 d-none d-lg-block">
-                    <div class="filter accordion bg-white border" id="accordionFilter">
-                        <div class="accordion-item border-filter">
-                            <h3 class="accordion-header" id="headingEth">
-                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterEth" aria-expanded="true" aria-controls="collapseFilterEth">
-                                    網路
-                                </button>
-                            </h3>
-                            <div id="collapseFilterEth" class="accordion-collapse collapse show" aria-labelledby="headingEth">
-                                <div class="accordion-body">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="filterCrypto-eth">
-                                        <label class="form-check-label" for="filterCrypto-eth">
-                                            以太坊
-                                        </label>
+                    <div class="filter accordion bg-white" id="accordionFilter">
+                        <div class="container px-lg-0">
+                            <div class="accordion-item border-filter">
+                                <h3 class="accordion-header" id="headingEth">
+                                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterEth" aria-expanded="true" aria-controls="collapseFilterEth">
+                                        網路
+                                    </button>
+                                </h3>
+                                <div id="collapseFilterEth" class="accordion-collapse collapse show" aria-labelledby="headingEth">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterCrypto-eth">
+                                            <label class="form-check-label" for="filterCrypto-eth">
+                                                以太坊
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterCrypto-bnb">
+                                            <label class="form-check-label" for="filterCrypto-bnb">
+                                                BNB 智能鏈
+                                            </label>
+                                            
+                                        </div>
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="filterCrypto-bnb">
-                                        <label class="form-check-label" for="filterCrypto-bnb">
-                                            BNB 智能鏈
-                                        </label>
-                                        
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item border-filter">
+                                <h3 class="accordion-header" id="headingState">
+                                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterState" aria-expanded="true" aria-controls="collapseFilterState">
+                                        狀態
+                                    </button>
+                                </h3>
+                                <div id="collapseFilterState" class="accordion-collapse collapse show" aria-labelledby="headingState">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterState-display">
+                                            <label class="form-check-label" for="filterState-display">
+                                                僅展示
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="filterState-onSale">
+                                            <label class="form-check-label" for="filterState-onSale">
+                                                拍賣中
+                                            </label>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-group">
+                                <h3 class="fw-bold text-muted fs-6 p-4">屬性</h3>
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header" id="headingSpecies">
+                                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterSpecies" aria-expanded="true" aria-controls="collapseFilterSpecies">
+                                            品種
+                                        </button>
+                                    </h4>
+                                    <div id="collapseFilterSpecies" class="accordion-collapse collapse" aria-labelledby="headingSpecies">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterSpecies-01">
+                                                <label class="form-check-label" for="filterSpecies-01">
+                                                    八哥
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterSpecies-02">
+                                                <label class="form-check-label" for="filterSpecies-02">
+                                                    虎皮鸚鵡
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterSpecies-03">
+                                                <label class="form-check-label" for="filterSpecies-03">
+                                                    太平鳥
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterSpecies-04">
+                                                <label class="form-check-label" for="filterSpecies-04">
+                                                    畫眉鳥
+                                                </label>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item ">
+                                    <h4 class="accordion-header" id="headingAmount">
+                                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterAmount" aria-expanded="true" aria-controls="collapseFilterAmount">
+                                            鳥的數量
+                                        </button>
+                                    </h4>
+                                    <div id="collapseFilterAmount" class="accordion-collapse collapse" aria-labelledby="headingAmount">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterAmount-01">
+                                                <label class="form-check-label" for="filterAmount-01">
+                                                    1 隻
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterAmount-02">
+                                                <label class="form-check-label" for="filterAmount-02">
+                                                    2 隻
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterAmount-03">
+                                                <label class="form-check-label" for="filterAmount-03">
+                                                    5 隻
+                                                </label>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item ">
+                                    <h4 class="accordion-header" id="headingFlower">
+                                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterFlower" aria-expanded="true" aria-controls="collapseFilterFlower">
+                                            是否有花草
+                                        </button>
+                                    </h4>
+                                    <div id="collapseFilterFlower" class="accordion-collapse collapse" aria-labelledby="headingFlower">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterFlower-01">
+                                                <label class="form-check-label" for="filterFlower-01">
+                                                    有
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterFlower-02">
+                                                <label class="form-check-label" for="filterFlower-02">
+                                                    沒有
+                                                </label>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item ">
+                                    <h4 class="accordion-header" id="headingColor">
+                                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterColor" aria-expanded="true" aria-controls="collapseFilterColor">
+                                            鳥的顏色
+                                        </button>
+                                    </h4>
+                                    <div id="collapseFilterColor" class="accordion-collapse collapse" aria-labelledby="headingColor">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterColor-01">
+                                                <label class="form-check-label" for="filterColor-01">
+                                                    白色
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterColor-02">
+                                                <label class="form-check-label" for="filterColor-02">
+                                                    黑色
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterColor-03">
+                                                <label class="form-check-label" for="filterColor-03">
+                                                    綠色
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterColor-04">
+                                                <label class="form-check-label" for="filterColor-04">
+                                                    黃色
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="filterColor-05">
+                                                <label class="form-check-label" for="filterColor-05">
+                                                    藍色
+                                                </label>
+                                            </div>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="accordion-item border-filter">
-                            <h3 class="accordion-header" id="headingState">
-                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterState" aria-expanded="true" aria-controls="collapseFilterState">
-                                    狀態
-                                </button>
-                            </h3>
-                            <div id="collapseFilterState" class="accordion-collapse collapse show" aria-labelledby="headingState">
-                                <div class="accordion-body">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="filterState-display">
-                                        <label class="form-check-label" for="filterState-display">
-                                            僅展示
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="filterState-onSale">
-                                        <label class="form-check-label" for="filterState-onSale">
-                                            拍賣中
-                                        </label>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-group">
-                            <h3 class="fw-bold text-muted fs-6 p-4">屬性</h3>
-                            <div class="accordion-item">
-                                <h4 class="accordion-header" id="headingSpecies">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterSpecies" aria-expanded="true" aria-controls="collapseFilterSpecies">
-                                        品種
-                                    </button>
-                                </h4>
-                                <div id="collapseFilterSpecies" class="accordion-collapse collapse" aria-labelledby="headingSpecies">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterSpecies-01">
-                                            <label class="form-check-label" for="filterSpecies-01">
-                                                八哥
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterSpecies-02">
-                                            <label class="form-check-label" for="filterSpecies-02">
-                                                虎皮鸚鵡
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterSpecies-03">
-                                            <label class="form-check-label" for="filterSpecies-03">
-                                                太平鳥
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterSpecies-04">
-                                            <label class="form-check-label" for="filterSpecies-04">
-                                                畫眉鳥
-                                            </label>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="accordion-item ">
-                                <h4 class="accordion-header" id="headingAmount">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterAmount" aria-expanded="true" aria-controls="collapseFilterAmount">
-                                        鳥的數量
-                                    </button>
-                                </h4>
-                                <div id="collapseFilterAmount" class="accordion-collapse collapse" aria-labelledby="headingAmount">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterAmount-01">
-                                            <label class="form-check-label" for="filterAmount-01">
-                                                1 隻
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterAmount-02">
-                                            <label class="form-check-label" for="filterAmount-02">
-                                                2 隻
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterAmount-03">
-                                            <label class="form-check-label" for="filterAmount-03">
-                                                5 隻
-                                            </label>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="accordion-item ">
-                                <h4 class="accordion-header" id="headingFlower">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterFlower" aria-expanded="true" aria-controls="collapseFilterFlower">
-                                        是否有花草
-                                    </button>
-                                </h4>
-                                <div id="collapseFilterFlower" class="accordion-collapse collapse" aria-labelledby="headingFlower">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterFlower-01">
-                                            <label class="form-check-label" for="filterFlower-01">
-                                                有
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterFlower-02">
-                                            <label class="form-check-label" for="filterFlower-02">
-                                                沒有
-                                            </label>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="accordion-item ">
-                                <h4 class="accordion-header" id="headingColor">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilterColor" aria-expanded="true" aria-controls="collapseFilterColor">
-                                        鳥的顏色
-                                    </button>
-                                </h4>
-                                <div id="collapseFilterColor" class="accordion-collapse collapse" aria-labelledby="headingColor">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterColor-01">
-                                            <label class="form-check-label" for="filterColor-01">
-                                                白色
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterColor-02">
-                                            <label class="form-check-label" for="filterColor-02">
-                                                黑色
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterColor-03">
-                                            <label class="form-check-label" for="filterColor-03">
-                                                綠色
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterColor-04">
-                                            <label class="form-check-label" for="filterColor-04">
-                                                黃色
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="filterColor-05">
-                                            <label class="form-check-label" for="filterColor-05">
-                                                藍色
-                                            </label>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
                     </div>
                 </aside>
                 <section class="col col-lg-9">

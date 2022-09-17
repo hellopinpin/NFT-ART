@@ -1,5 +1,7 @@
 .header_nav{
     position: relative;
+    padding-top: 7px;
+    padding-bottom: 6px;
     @include media-breakpoint-up(md){
         .col:not(:last-child){
             border-right: 1px solid #000;
@@ -13,7 +15,7 @@
         }
     }
     
-    .nav-search{
+    .nav-search-input{
         width: auto;
         flex-grow: 1;
         height: 36px;
@@ -24,6 +26,23 @@
         font-size: 18px;
         @include media-breakpoint-up(md){
             font-size: 24px;
+        }
+    }
+    
+    .nav-searchBar-mobile{
+        padding-top: 7px;
+        padding-bottom: 6px;
+        display: flex;
+        background: $body-bg;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: all 0.3s;
+        @include media-breakpoint-up(md){
+            display: none;
+        }
+        &:not(.show){
+            left: -100%;
         }
     }
     

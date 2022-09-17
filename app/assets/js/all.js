@@ -34,4 +34,14 @@ $(document).ready(function () {
         $(this).toggleClass('bg-warning');
         $(this).children('i').toggleClass('fa-plus').toggleClass('fa-minus');
     });
+
+    $('.nav-searchBar-mobile-show').click(function (e) { 
+        e.preventDefault();
+        $('.nav-searchBar-mobile').addClass('show');
+    });
+
+    $('.nav-searchBar-mobile-hide').click(function (e) { 
+        e.preventDefault();
+        $('.nav-searchBar-mobile').removeClass('show');
+    });
 });
