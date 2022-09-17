@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>藝術品 :: NFT ART</title>
+  <link rel="icon" href="./assets/images/logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  
+  <nav class="header_nav nav py-md-0 border-bottom position-relative">
+    <div class="container-lg">
+      <div class="row g-0 justify-content-between">
+        <div class="col col-md-auto col-lg-5 d-flex align-items-center flex-grow-1">
+          <a class="nav-logo" href="index.html"><img src="./assets/images/logo.svg" alt="logo"></a>
+        </div>
+        
+        <div class="col col-md-auto col-lg-4 d-flex justify-content-end align-items-center flex-grow-1">
+          <form class="w-100 text-end px-md-3">
+            <div class="d-none d-md-flex">
+              <input class="form-control nav-search-input bg-transparent border-0 p-0" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+              <button class="btn border-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <button class="btn border-0 d-md-none nav-searchBar-mobile-show" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="position-absolute nav-searchBar-mobile" id="nav-searchBar-mobile">
+              <button class="btn border-0 nav-searchBar-mobile-hide" type="button"><i class="fa-solid fa-angle-left"></i></button>
+              <input class="form-control nav-search bg-transparent border-0 p-0" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">              
+              <button class="btn border-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </form>
+        </div>
+        
+        <div class="col col-md-4 col-lg-3 flex-grow-0">
+
+          <button class="btn nav-btn-bars border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navToggler" aria-controls="navToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars fs-4"></i>
+          </button>
+          <div class="collapse multi-collapse nav-collapse" id="navToggler">
+            <ul class="nav-list container-lg px-lg-0 g-0 fw-bold text-center justify-content-between">
+              <li class="nav-item">
+                <a class="nav-link fs-5 py-4 py-md-6" href="explore.html">探索</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 py-4 py-md-6" href="ranking.html">市值</a>
+              </li>
+              <li class="nav-item mb-4 mb-md-0">
+                <a role="button" class="nav-link link-wallet-md fs-5 py-4 py-md-6" data-bs-toggle="modal" data-bs-target="#walletModal"><i class="fa-solid fa-wallet fs-3"></i></a>
+                <button type="button" class="btn btn-primary link-wallet py-2 w-100" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="navToggler collapseWallet">連結錢包</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- 手機板連結錢包 -->
+  <div class="collapse multi-collapse collapseWallet" id="collapseWallet">
+    <div class="card border-0 vw-100">
+      <div class="card-header wallet-header py-3 px-2 position-relative">
+        <h5 class="card-title text-center mb-0 fs-4">連結你的錢包</h5>
+        <button class="btn position-absolute top-50 end-0 translate-middle-y" type="button" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#collapseWallet" aria-expanded="false" aria-controls="collapseWallet">
+          <i class="fa-solid fa-xmark fs-4"></i>
+        </button>
+      </div>
+      <div class="card-body wallet-body py-4 px-2 pe-1">
+        <div class="btn-group wallet-group w-100 d-flex flex-column gap-2" role="group" aria-label="Basic radio toggle button group">
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-MetaMask" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-MetaMask"><img src="./assets/images/connect/connect01.png" alt="wallet-01" class="wallet-icon me-1"><span>MetaMask</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-CoinbaseWallet" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-CoinbaseWallet"><img src="./assets/images/connect/connect02.png" alt="wallet-02" class="wallet-icon me-1"><span>Coinbase Wallet</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-WalletConnect" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-WalletConnect"><img src="./assets/images/connect/connect03.png" alt="wallet-03" class="wallet-icon me-1"><span>WalletConnect</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-Phantom" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-Phantom"><img src="./assets/images/connect/connect04.png" alt="wallet-04" class="wallet-icon me-1"><span>Phantom</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-Glow" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-Glow"><img src="./assets/images/connect/connect05.png" alt="wallet-05" class="wallet-icon me-1"><span>Glow</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+          <div class="">
+            <input type="radio" class="btn-check" name="linkToWallet-mobile" id="wallet-mobile-Fortmatic" autocomplete="off">
+            <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-mobile-Fortmatic"><img src="./assets/images/connect/connect06.png" alt="wallet-06" class="wallet-icon me-1"><span>Fortmatic</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+          </div>
+          
+        </div>
+      </div>
+      <div class="card-footer wallet-footer justify-content-center p-0 border-0">
+        <button type="submit" class="btn btn-primary border-0 border-top py-1 px-6 m-0 fs-5 w-100" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#collapseWallet" aria-expanded="false" aria-controls="collapseWallet">連結錢包</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- PC版連結錢包 -->
+  <div class="modal fade wallet-modal" id="walletModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header wallet-header justify-content-center">
+          <h5 class="modal-title fs-4" id="walletModalLabel">連結你的錢包</h5>
+        </div>
+        <div class="modal-body wallet-body py-4 pe-1">
+          <div class="btn-group wallet-group row row-cols-2 g-1 w-100" role="group" aria-label="Basic radio toggle button group">
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-MetaMask" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-MetaMask"><img src="./assets/images/connect/connect01.png" alt="wallet-01" class="wallet-icon me-1"><span>MetaMask</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-CoinbaseWallet" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-CoinbaseWallet"><img src="./assets/images/connect/connect02.png" alt="wallet-02" class="wallet-icon me-1"><span>Coinbase Wallet</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-WalletConnect" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-WalletConnect"><img src="./assets/images/connect/connect03.png" alt="wallet-03" class="wallet-icon me-1"><span>WalletConnect</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-Phantom" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-Phantom"><img src="./assets/images/connect/connect04.png" alt="wallet-04" class="wallet-icon me-1"><span>Phantom</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-Glow" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-Glow"><img src="./assets/images/connect/connect05.png" alt="wallet-05" class="wallet-icon me-1"><span>Glow</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+            <div class="col">
+              <input type="radio" class="btn-check" name="linkToWallet" id="wallet-Fortmatic" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 label-wallet" for="wallet-Fortmatic"><img src="./assets/images/connect/connect06.png" alt="wallet-06" class="wallet-icon me-1"><span>Fortmatic</span><i class="fa-solid fa-check ms-auto text-orange"></i></label>
+            </div>
+            
+          </div>
+        </div>
+        <div class="modal-footer wallet-footer justify-content-center px-3 pt-0 pb-4 border-0">
+          <button type="button" class="btn btn-primary py-1 px-6 m-0 fs-5">連結錢包</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <main>
+    <div class="container">
+        <section class="artwork mt-4 mb-6 mt-lg-6">
+            <div class="artwork-header mb-4">
+                <div class="row row-cols-1 row-lg-cols-2 gy-4">
+                    <div class="col col-lg-6">
+                        <img src="./assets/images/art/art21.jpg" alt="art21" class="artwork-header-image">
+                    </div>
+                    <div class="col col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <div class="d-flex flex-column flex-lg-row-reverse justify-content-between mb-3">
+                                    <div class="d-flex align-items-center mb-1 mb-lg-0 position-relative">
+                                        <img src="./assets/images/artist01.jpg" alt="artist01" class="rounded-circle fit-cover me-1 pic-sm">
+                                        <a href="artist.html" class="fs-6 font-squada stretched-link">Michael</a>
+                                    </div>
+                                    <h1 class="h1">兩情相悅</h1>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <div>
+                                        <p class="text-muted fs-7 mb-1">最高出價</p>
+                                        <div class="d-flex gap-1 align-items-center">
+                                            <img src="./assets/images/user01.jpg" alt="user01" class="rounded-circle fit-cover pic-sm">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                            <p class="font-squada">0.044Eth</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-primary px-7 py-1">出價</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="card-body">
+                                <p class="mb-3">3/14情人節外面剛好有兩隻鳥，也在過情人節。</p>
+                                <p class="mb-3">而且其中一隻竟然有梳油頭，不知道是不是有用定型液，他們感情真好，出門還會特別打扮，看著看著不禁思考，我怎麼會變這樣？</p>
+                                <p>好羨慕啊，我也要有這樣兩情相悅的另一半。</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="artwork-body">
+                <div class="row row-cols-1 row-cols-lg-2 gy-4" data-masonry='{"percentPosition": true }'>
+                    <div class="col">
+                        <div class="collapse-item">
+                            <h2 class="collapse-item-header">
+                                <button type="button" class="btn collapse-button" data-bs-toggle="collapse" data-bs-target="#collapseItem-species" aria-expanded="false" aria-controls="collapseItem-species">屬性</button>
+                            </h2>
+                            <div class="collapse show" id="collapseItem-species">
+                                <div class="collapse-item-body px-3 py-4 p-lg-4">
+                                    <table class="artwork-table table">
+                                        <tbody>
+                                            <tr>
+                                                <th>品種</th>
+                                                <td class="text-end text-muted">青藍金剛鸚鵡</td>
+                                            </tr>
+                                            <tr>
+                                                <th>鳥的數量</th>
+                                                <td class="text-end text-muted">2隻</td>
+                                            </tr>
+                                            <tr>
+                                                <th>是否有花草</th>
+                                                <td class="text-end text-muted">是</td>
+                                            </tr>
+                                            <tr>
+                                                <th>鳥的顏色</th>
+                                                <td class="text-end text-muted">藍色</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="collapse-item">
+                            <h2 class="collapse-item-header">
+                                <button type="button" class="btn collapse-button" data-bs-toggle="collapse" data-bs-target="#collapseItem-bid" aria-expanded="false" aria-controls="collapseItem-bid">出價</button>
+                            </h2>
+                            <div class="collapse show" id="collapseItem-bid">
+                                <div class="collapse-item-body px-3 py-4 p-lg-4">
+                                    <table class="artwork-table table">
+                                        <thead>
+                                            <tr class="text">
+                                                <th scope="col" class="w-50 text-center text-lg-start fs-7"><p>價格</p></th>
+                                                <th scope="col" class="w-50 text-center text-lg-start fs-7"><p>期限</p></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="px-lg-3">
+                                                    <div class="d-flex gap-1 align-items-center">
+                                                        <img src="./assets/images/artist03.jpg" alt="user" class="rounded-circle fit-cover pic-sm">
+                                                        <i class="fa-solid fa-arrow-right"></i>
+                                                        <p class="font-squada">0.044Eth</p>
+                                                    </div>
+                                                </th>
+                                                <td class="text-end text-lg-start px-lg-3 text-muted">3個月後</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="px-lg-3">
+                                                    <div class="d-flex gap-1 align-items-center">
+                                                        <img src="./assets/images/user02.jpg" alt="user" class="rounded-circle fit-cover pic-sm">
+                                                        <i class="fa-solid fa-arrow-right"></i>
+                                                        <p class="font-squada">0.054Eth</p>
+                                                    </div>
+                                                </th>
+                                                <td class="text-end text-lg-start px-lg-3 text-muted">1個月後</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="px-lg-3">
+                                                    <div class="d-flex gap-1 align-items-center">
+                                                        <img src="./assets/images/user03.jpg" alt="user" class="rounded-circle fit-cover pic-sm">
+                                                        <i class="fa-solid fa-arrow-right"></i>
+                                                        <p class="font-squada">0.044Eth</p>
+                                                    </div>
+                                                </th>
+                                                <td class="text-end text-lg-start px-lg-3 text-muted">2週後</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="collapse-item">
+                            <h2 class="collapse-item-header">
+                                <button type="button" class="btn collapse-button" data-bs-toggle="collapse" data-bs-target="#collapseItem-Info" aria-expanded="false" aria-controls="collapseItem-Info">基本資訊</button>
+                            </h2>
+                            <div class="collapse show" id="collapseItem-Info">
+                                <div class="collapse-item-body px-3 py-4 p-lg-4">
+                                    <table class="artwork-table table">
+                                        <tbody>
+                                            <tr>
+                                                <th>擁有者</th>
+                                                <td class="text-end text-muted">0xa543x…1283</td>
+                                            </tr>
+                                            <tr>
+                                                <th>代幣ID</th>
+                                                <td class="text-end text-muted">#1234</td>
+                                            </tr>
+                                            <tr>
+                                                <th>合約地址</th>
+                                                <td class="text-end text-muted">青藍金剛鸚鵡</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="collapse-item">
+                            <h2 class="collapse-item-header">
+                                <button type="button" class="btn collapse-button" data-bs-toggle="collapse" data-bs-target="#collapseItem-transactionHistory" aria-expanded="false" aria-controls="collapseItem-transactionHistory">交易歷史</button>
+                            </h2>
+                            <div class="collapse show" id="collapseItem-transactionHistory">
+                                <div class="collapse-item-body px-3 py-4 p-lg-4">
+                                    <table class="artwork-table table">
+                                        <thead>
+                                            <tr class="text">
+                                                <th scope="col"><p>事件</p></th>
+                                                <th scope="col"><p>價格</p></th>
+                                                <th scope="col"><p>從</p></th>
+                                                <th scope="col"><p>時間</p></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="px-3">上架</th>
+                                                <td class="px-3">2nb</td>
+                                                <td class="px-3 d-flex align-items-center">
+                                                    <img src="./assets/images/user02.jpg" alt="user" class="rounded-circle fit-cover pic-xs">
+                                                    <p class="font-squada d-none d-md-block ms-1">Antony WU</p>
+                                                </td>
+                                                <td class="px-3 text-muted">14小時前</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="px-3">出價</th>
+                                                <td class="px-3">2nb</td>
+                                                <td class="px-3 d-flex align-items-center">
+                                                    <img src="./assets/images/artist01.jpg" alt="user" class="rounded-circle fit-cover pic-xs">
+                                                    <p class="font-squada d-none d-md-block ms-1">Antony WU</p>
+                                                </td>
+                                                <td class="px-3 text-muted">2天前</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="otherArtworks mb-6">
+            <div class="d-flex justify-content-between align-items-end border-bottom mb-4 mb-lg-7">
+                <h2 class="h2 flex-grow-1 pb-1 pb-lg-3"><span class="font-squada">Other</span><span class="fs-4 ps-3 d-none d-lg-inline">其餘作品</span></h2>
+                <div>
+                    <a href="artwork-series.html" class="btn btn-triangle border-0">more</a>
+                </div>
+            </div>
+            
+            <div class="swiper otherArtworksSwiper masonry">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art20.jpg" class="fit-cover" alt="art20" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>這兩隻也太像企鵝了吧</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">這兩隻也太像企鵝了吧</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art22.jpg" class="fit-cover" alt="art22" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>群聚的小鳥們</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">群聚的小鳥們</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art23.jpg" class="fit-cover" alt="art23" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>與你分享的快樂勝過獨自擁有</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">與你分享的快樂勝過獨自擁有</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art24.jpg" class="fit-cover" alt="art24" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>會唱 metal 的鳥</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">會唱 metal 的鳥</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art25.jpg" class="fit-cover" alt="art25" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>一大一小兩個恰恰好</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">一大一小兩個恰恰好</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art20.jpg" class="fit-cover" alt="art20" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>這兩隻也太像企鵝了吧</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">這兩隻也太像企鵝了吧</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art22.jpg" class="fit-cover" alt="art22" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>群聚的小鳥們</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">群聚的小鳥們</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art23.jpg" class="fit-cover" alt="art23" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>與你分享的快樂勝過獨自擁有</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">與你分享的快樂勝過獨自擁有</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art24.jpg" class="fit-cover" alt="art24" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>會唱 metal 的鳥</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">會唱 metal 的鳥</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art25.jpg" class="fit-cover" alt="art25" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>一大一小兩個恰恰好</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">一大一小兩個恰恰好</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art20.jpg" class="fit-cover" alt="art20" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>這兩隻也太像企鵝了吧</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">這兩隻也太像企鵝了吧</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art22.jpg" class="fit-cover" alt="art22" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>群聚的小鳥們</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">群聚的小鳥們</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art23.jpg" class="fit-cover" alt="art23" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>與你分享的快樂勝過獨自擁有</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">與你分享的快樂勝過獨自擁有</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art24.jpg" class="fit-cover" alt="art24" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>會唱 metal 的鳥</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">會唱 metal 的鳥</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art25.jpg" class="fit-cover" alt="art25" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>一大一小兩個恰恰好</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">一大一小兩個恰恰好</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="card bg-transparent">
+                            <div class="card-image">
+                                <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art20.jpg" class="fit-cover" alt="art20" ></a>
+                                <div class="card-text text-white p-3 m-3">
+                                    <p>這兩隻也太像企鵝了吧</p>
+                                    <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
+                                    <div class="mt-auto text-end">
+                                        <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h3 p-1 py-lg-3 px-lg-0">這兩隻也太像企鵝了吧</h3>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </div>
+</main>
+  
+  <footer class="footer border-1 border-top pt-1">
+    <p class="text-center py-3 border-4 border-top">© ART NFT. All Rights Reserved</p>
+  </footer>
+  
+  <!-- <script src="./assets/js/vendors.js"></script> -->  
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
