@@ -195,16 +195,6 @@
       }
     }
   }
-  
-  @include media-breakpoint-up(xl){
-    .swiper-slide-prev,.swiper-slide-next{
-      width: calc((100% - 48px) / 4 ) !important;
-    }
-    .swiper-slide-active{
-      width: calc((100% - 48px) / 2 ) !important;
-    }
-  } 
-  
   @include media-breakpoint-up(xl){
     .swiper-slide{
       .card{
@@ -224,6 +214,15 @@
       }
     }
   }
+
+  @include media-breakpoint-up(xl){
+    .swiper-slide-prev,.swiper-slide-next{
+      width: calc((100% - 48px) / 4 ) !important;
+    }
+    .swiper-slide-active{
+      width: calc((100% - 48px) / 2 ) !important;
+    }
+  }  
   
   .swiper-button-next,.swiper-button-prev{
     @include media-breakpoint-up(lg){
@@ -239,38 +238,40 @@
     }
   }
   
-  @include media-breakpoint-up(lg){
-    .swiper-button-prev{
-      left: 0px;
-    }
-    .swiper-button-next{
-      right: 0px;
-    }  
-  }  
   
-  .swiper-button-next:after,.swiper-button-prev:after {
-    content: none;
-  }
-  
-  .swiper-pagination{
-    position: static;
-    margin-top: 24px;
-    line-height: 1;
-    font-size: 8px;
-    @include media-breakpoint-up(lg){
-      margin-top: 48px;
-    }
-  }
-  
-  .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    border-radius: 0 ;
-    background: black;
-    opacity: 1;
-    &-active{
-      background: $orange;
-      width: 16px;
-    }
-  } 
 }
+
+@include media-breakpoint-up(lg){
+  .swiper-button-prev{
+    left: 0px;
+  }
+  .swiper-button-next{
+    right: 0px;
+  }  
+}
+
+.swiper-button-next:after,.swiper-button-prev:after {
+  content: none;
+}  
+
+.swiper-pagination{
+  position: static;
+  margin-top: 24px;
+  line-height: 1;
+  font-size: 8px;
+  @include media-breakpoint-up(lg){
+    margin-top: 48px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 0 ;
+  background: black;
+  opacity: 1;
+  &-active{
+    background: $orange;
+    width: 16px;
+  }
+} 

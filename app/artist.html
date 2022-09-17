@@ -62,20 +62,20 @@ current: index
         <div class="container">
             <ul class="nav nav-tabs mb-4 mb-lg-6" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="artworks-tab" data-bs-toggle="tab" data-bs-target="#artist-artWorks" type="button" role="tab" aria-controls="artworks" aria-selected="true">
+                    <button class="nav-link" id="artworks-tab" data-bs-toggle="tab" data-bs-target="#artist-artWorks" type="button" role="tab" aria-controls="artworks" aria-selected="false">
                         <span class="span-1">Art Works</span>
                         <span class="span-2 fw-bold ps-3 fs-4 d-none d-lg-inline">系列作品</span>
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="collection-tab" data-bs-toggle="tab" data-bs-target="#artist-collection" type="button" role="tab" aria-controls="collection" aria-selected="false">
+                    <button class="nav-link active" id="collection-tab" data-bs-toggle="tab" data-bs-target="#artist-collection" type="button" role="tab" aria-controls="collection" aria-selected="true">
                         <span class="span-1">Collection</span>
                         <span class="span-2 fw-bold ps-3 fs-4 d-none d-lg-inline">收藏品</span>
                     </button>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active artist-artWorks" id="artist-artWorks" role="tabpanel" aria-labelledby="artworks-tab">
+                <div class="tab-pane fade artist-artWorks" id="artist-artWorks" role="tabpanel" aria-labelledby="artworks-tab">
                     <ul class="d-flex flex-column gap-3 gap-lg-6">
                         <li class="card d-block mb-lg-7">
                             <div class="triangle start-0 top-0 border-12 border-top border-start"></div>
@@ -85,7 +85,7 @@ current: index
                                 <div class="card-body pt-3 pb-5 px-lg-0 pb-lg-0">
                                     <p class="mb-4 mb-lg-0 pe-lg-8">我又沒有特別喜歡花，為什麼不給我現金就好，擺在那也不知道要幹嘛，只好畫起來看有沒有人要買，阿不然如果真的喜歡我，把這些都買回去八。</p>
                                     <img src="./assets/images/art/art31.jpg" alt="art31" class="card-image fit-cover d-lg-none mb-3">
-                                    <a href="#" class="btn btn-triangle">more</a>
+                                    <a href="artwork-series.html" class="btn btn-triangle">more</a>
                                 </div>
                                 <ul class="card-image-group d-none d-lg-flex gap-1">
                                     <li class="card-group-item"><img src="./assets/images/art/art31.jpg" alt="art31" class="card-image fit-cover"></li>
@@ -103,7 +103,7 @@ current: index
                                 <div class="card-body pt-3 pb-5 px-lg-0 pb-lg-0">
                                     <p class="mb-4 mb-lg-0 pe-lg-8">家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。</p>
                                     <img src="./assets/images/art/art27.jpg" alt="art27" class="card-image fit-cover d-lg-none mb-3">
-                                    <a href="#" class="btn btn-triangle">more</a>
+                                    <a href="artwork-series.html" class="btn btn-triangle">more</a>
                                 </div>
                                 <ul class="card-image-group d-none d-lg-flex gap-1">
                                     <li class="card-group-item"><img src="./assets/images/art/art27.jpg" alt="art27" class="card-image fit-cover"></li>
@@ -115,17 +115,17 @@ current: index
                         </li>
                     </ul>
                 </div>
-                <div class="tab-pane fade" id="artist-collection" role="tabpanel" aria-labelledby="collection-tab">
+                <div class="tab-pane fade show active" id="artist-collection" role="tabpanel" aria-labelledby="collection-tab">
                     <div class="masonry row row-cols-2 row-cols-lg-3 row-cols-xl-4"  data-masonry='{"percentPosition": true }'>
                         <div class="col">
                             <div class="card bg-transparent mt-4 mt-lg-7">
                                 <div class="card-image">
-                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art09.jpg" class="fit-cover" alt="art09" style="aspect-ratio:1 ;"></a>
+                                    <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art09.jpg" class="fit-cover" alt="art09" style="aspect-ratio:1 ;"></a>
                                     <div class="card-text text-white p-3 m-3">
                                         <p class="">唯一想擁有的人，唯一不可以擁有的</p>
                                         <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
                                         <div class="mt-auto text-end">
-                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -135,12 +135,12 @@ current: index
                         <div class="col">
                             <div class="card bg-transparent mt-4 mt-lg-7">
                                 <div class="card-image">
-                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art10.jpg" class="fit-cover" alt="art10" style="aspect-ratio:0.8 ;"></a>
+                                    <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art10.jpg" class="fit-cover" alt="art10" style="aspect-ratio:0.8 ;"></a>
                                     <div class="card-text text-white p-3 m-3">
                                         <p class="">唯一想擁有的人，唯一不可以擁有的</p>
                                         <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
                                         <div class="mt-auto text-end">
-                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -150,12 +150,12 @@ current: index
                         <div class="col">
                             <div class="card bg-transparent mt-4 mt-lg-7">
                                 <div class="card-image">
-                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art02.jpg" class="fit-cover" alt="art02"></a>
+                                    <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art02.jpg" class="fit-cover" alt="art02"></a>
                                     <div class="card-text text-white p-3 m-3">
                                         <p class="">唯一想擁有的人，唯一不可以擁有的</p>
                                         <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
                                         <div class="mt-auto text-end">
-                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -165,12 +165,12 @@ current: index
                         <div class="col">
                             <div class="card bg-transparent mt-4 mt-lg-7">
                                 <div class="card-image">
-                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art11.jpg" class="fit-cover" alt="art11"></a>
+                                    <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art11.jpg" class="fit-cover" alt="art11"></a>
                                     <div class="card-text text-white p-3 m-3 gap-0">
                                         <p class="">唯一想擁有的人，唯一不可以擁有的</p>
                                         <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
                                         <div class="mt-auto text-end">
-                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -180,12 +180,12 @@ current: index
                         <div class="col">
                             <div class="card bg-transparent mt-4 mt-lg-7">
                                 <div class="card-image">
-                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art12.jpg" class="fit-cover" alt="art12"></a>
+                                    <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art12.jpg" class="fit-cover" alt="art12"></a>
                                     <div class="card-text text-white p-3 m-3 gap-0">
                                         <p class="">唯一想擁有的人，唯一不可以擁有的</p>
                                         <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
                                         <div class="mt-auto text-end">
-                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -196,12 +196,12 @@ current: index
                         <div class="col">
                             <div class="card bg-transparent mt-4 mt-lg-7">
                                 <div class="card-image">
-                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art03.jpg" class="fit-cover" alt="art04" style="aspect-ratio:1 ;"></a>
+                                    <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art03.jpg" class="fit-cover" alt="art04" style="aspect-ratio:1 ;"></a>
                                     <div class="card-text text-white p-3 m-3">
                                         <p class="">唯一想擁有的人，唯一不可以擁有的</p>
                                         <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
                                         <div class="mt-auto text-end">
-                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -211,12 +211,12 @@ current: index
                         <div class="col">
                             <div class="card bg-transparent mt-4 mt-lg-7">
                                 <div class="card-image">
-                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art04.jpg" class="fit-cover" alt="art03"></a>
+                                    <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art04.jpg" class="fit-cover" alt="art03"></a>
                                     <div class="card-text text-white p-3 m-3">
                                         <p class="">唯一想擁有的人，唯一不可以擁有的</p>
                                         <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
                                         <div class="mt-auto text-end">
-                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -226,12 +226,12 @@ current: index
                         <div class="col">
                             <div class="card bg-transparent mt-4 mt-lg-7">
                                 <div class="card-image">
-                                    <a href="#" class="stretched-link"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/art27.jpg" class="fit-cover" alt="art27"></a>
+                                    <a href="artwork.html" class="stretched-link"><img src="./assets/images/art/art27.jpg" class="fit-cover" alt="art27"></a>
                                     <div class="card-text text-white p-3 m-3">
                                         <p class="">唯一想擁有的人，唯一不可以擁有的</p>
                                         <p><i class="fa-brands fa-ethereum pe-1"></i>300</p>
                                         <div class="mt-auto text-end">
-                                            <a href="#" class="m btn btn-triangle btn-triangle-w">more</a>
+                                            <a href="artwork.html" class="m btn btn-triangle btn-triangle-w">more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -241,11 +241,6 @@ current: index
                     </div>
                 </div>
             </div>
-            
-            
         </div>
-    </div>
-</div>
-
-</section>
+    </section>
 </main>

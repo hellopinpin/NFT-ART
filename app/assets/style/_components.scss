@@ -80,9 +80,10 @@
     }
     .card-image{
       position: relative;
-      border: 8px solid #fff;
+      padding: 8px;
+      background-color: #FFF;
       @include media-breakpoint-up(md){
-        border-width: 24px;
+        padding: 24px;
         &:hover::after{
           content:'';
           width: 100%;
